@@ -1,6 +1,5 @@
-
-// You should implement your task here.
-
 module.exports = function towelSort (matrix) {
-  return [];
+  return !matrix || !matrix.length 
+    ? []
+    : matrix.flat(Infinity).sort((a, b) => a - b)
 }
