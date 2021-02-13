@@ -1,5 +1,14 @@
 module.exports = function towelSort (matrix) {
-  return !matrix || !matrix.length 
-    ? []
-    : matrix.flat(Infinity).sort((a, b) => a - b)
+  if(!matrix) return []
+ 
+  let arr = []
+
+  for(let i = 0; i < matrix.length; i++) {
+    if(i % 2 === 0) 
+      arr.push(...matrix[i])
+    else 
+      arr.push(...matrix[i].reverse())
+  }
+
+  return arr
 }
